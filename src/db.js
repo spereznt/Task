@@ -1,8 +1,13 @@
-import {Pool} from 'pg'
+import pg from 'pg'
 
-new Pool({
+export const pool = new pg.Pool({
     port : 5432,
     host :'localhost',
     user : 'postgres',
-    password : 'password'
+    password : 'skapir',
+    database : 'tasksdb'
+})
+
+pool.on('connect',()=>{
+    console.log('DataBase Connected')
 })

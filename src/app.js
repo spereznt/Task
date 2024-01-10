@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 // Routes
-app.get('/',(req,res)=>res.json({message:"bienvenido a mi API"}));
+app.get('/',(req,res)=>res.json({message:"bienvenido a mi API SKAPIRTEC"}));
 app.use('/api',taskRoutes);
 app.use('/api',authRoutes)
 
